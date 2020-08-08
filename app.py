@@ -45,7 +45,7 @@ class HttpWSSProtocol(websockets.WebSocketServerProtocol):
             googleRequestJson = json.loads(googleRequest)
 
             #{"location": "living", "state": "on", "device": "lights"}
-            if 'what' in googleRequestJson['queryResult']['queryText']:
+            if 'como' in googleRequestJson['queryResult']['queryText']:
                 ESPparameters = googleRequestJson['queryResult']['parameters']
                 ESPparameters['query'] = '?'
             else:
